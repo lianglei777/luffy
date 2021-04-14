@@ -18,8 +18,12 @@
   },
   "homepage": "https://github.com/lianglei777/luffy#readme",
   "devDependencies": {
+    "autoprefixer": "^10.2.5",
     "css-loader": "^5.2.1",
     "html-webpack-plugin": "^5.3.1",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.0",
+    "postcss-loader": "^5.2.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.32.0",
     "webpack-cli": "^4.6.0",
