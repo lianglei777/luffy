@@ -1,0 +1,37 @@
+{
+  "name": "luffy",
+  "version": "1.0.0",
+  "description": ">  与 ONE PIECE（海贼王） 的主角同名，意为逆风起航",
+  "scripts": {
+    "start": "webpack serve --config webpack.common.js --progress ",
+    "build": "webpack --config webpack.common.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lianglei777/luffy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lianglei777/luffy/issues"
+  },
+  "homepage": "https://github.com/lianglei777/luffy#readme",
+  "devDependencies": {
+    "css-loader": "^5.2.1",
+    "html-webpack-plugin": "^5.3.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.32.0",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-import": "^1.13.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
