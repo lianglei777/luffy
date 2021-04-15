@@ -32,7 +32,22 @@ module.exports = {
             },
             {
                 test: /\.less$/i,
-                use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader'],
+                use: [ 
+                    "style-loader",
+                    "css-loader",
+                    // 为了解决引入antd样式解析编译失败，需要改为以下写法,添加配置
+                    {
+                        loader: "less-loader",
+                        options: {
+                            lessOptions: {
+                                javascriptEnabled: true, // https://github.com/ant-design/ant-design/issues/7927#issuecomment-400368810
+                                // 严格数学计算关闭，不然antd样式编译报错
+                                strictMath: false, // https://github.com/ant-design/ant-design/pull/17375
+                            },
+                        },
+                    },
+                    "postcss-loader"
+                ],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
