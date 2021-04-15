@@ -1,5 +1,5 @@
 const path = require('path');
- const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development', // 开发环境 development、production
@@ -7,10 +7,9 @@ module.exports = {
     devtool: 'inline-source-map', // 生产环境关掉
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
-        open: true,
-        // contentBase: './dist',
-        compress: true,
-        port: 9000,
+        open: true, // 运行时自动打开浏览器
+        compress: true, // 启用gzip压缩
+        port: 9000, // 端口
     },
     output: {
         filename: 'index.js',
@@ -30,6 +29,10 @@ module.exports = {
             {
                 test: /\.css$/i,
                 use: ['style-loader', 'css-loader'],
+            },
+            {
+                test: /\.less$/i,
+                use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader'],
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,

@@ -17,7 +17,11 @@
     "@babel/preset-react"
 ],
 "plugins": [
-    [
-      "import", { "libraryName": "antd-mobile", "style": "css" }] // `style: true` 会加载 less 文件
+    // 支持装饰器语法
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    // 与plugin-proposal-decorators搭配使用
+    ["@babel/plugin-proposal-class-properties", { "loose": true }]
+
+    // ["import", { "libraryName": "antd-mobile", "style": "css" }], // `style: true` 会加载 less 文件
    ]
 }
