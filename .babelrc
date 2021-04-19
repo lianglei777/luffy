@@ -20,8 +20,8 @@
     // 支持装饰器语法
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
     // 与plugin-proposal-decorators搭配使用
-    ["@babel/plugin-proposal-class-properties", { "loose": true }]
-
-    // ["import", { "libraryName": "antd-mobile", "style": "css" }], // `style: true` 会加载 less 文件
+    ["@babel/plugin-proposal-class-properties", { "loose": true }],
+    // babel-plugin-import：antd按需加载，减小包大小. "style": "css"样式会加载css文件， `style: true` 样式会加载 less 文件
+    ["import", { "libraryName": "antd", "libraryDirectory": "lib", "style": "css"}, "antd"]
    ]
 }

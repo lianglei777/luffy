@@ -1,5 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+// 分析包大小工具
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// dayjs 替换momentjs , 减小包大小 560k --> 5k
+const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 
 module.exports = {
     mode: 'development', // 开发环境 development、production
@@ -35,6 +39,7 @@ module.exports = {
                 use: [ 
                     "style-loader",
                     "css-loader",
+                    "postcss-loader",
                     // 为了解决引入antd样式解析编译失败，需要改为以下写法,添加配置
                     {
                         loader: "less-loader",
@@ -45,8 +50,7 @@ module.exports = {
                                 strictMath: false, // https://github.com/ant-design/ant-design/pull/17375
                             },
                         },
-                    },
-                    "postcss-loader"
+                    }
                 ],
             },
             {
@@ -65,5 +69,7 @@ module.exports = {
             template: path.resolve('./index.html'), //html模板, 从根目录开始
             inject: true, // true：默认值，script标签位于html文件的 body 底部
         }),
+        new BundleAnalyzerPlugin(),
+        new AntdDayjsWebpackPlugin(),
     ],
 };
