@@ -1,49 +1,70 @@
 {
-  "name": "luffy",
-  "version": "1.0.0",
-  "description": ">  与 ONE PIECE（海贼王） 的主角同名，意为逆风起航",
-  "scripts": {
-    "start": "webpack serve --config webpack.common.js --progress ",
-    "build": "webpack --config webpack.common.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lianglei777/luffy.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lianglei777/luffy/issues"
-  },
-  "homepage": "https://github.com/lianglei777/luffy#readme",
-  "devDependencies": {
-    "@babel/plugin-proposal-decorators": "^7.13.15",
-    "@babel/plugin-syntax-class-properties": "^7.12.13",
-    "antd-dayjs-webpack-plugin": "^1.0.6",
-    "autoprefixer": "^10.2.5",
-    "css-loader": "^5.2.1",
-    "html-webpack-plugin": "^5.3.1",
-    "less": "^4.1.1",
-    "less-loader": "^8.1.0",
-    "mobx": "^6.2.0",
-    "mobx-react": "^7.1.0",
-    "postcss-loader": "^5.2.0",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.32.0",
-    "webpack-bundle-analyzer": "^4.4.1",
-    "webpack-cli": "^4.6.0",
-    "webpack-dev-server": "^3.11.2"
-  },
-  "dependencies": {
-    "@babel/core": "^7.13.15",
-    "@babel/preset-env": "^7.13.15",
-    "@babel/preset-react": "^7.13.13",
-    "antd": "^4.15.1",
-    "babel-loader": "^8.2.2",
-    "babel-plugin-import": "^1.13.3",
-    "dayjs": "^1.10.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  }
+    "name": "luffy",
+    "version": "1.0.0",
+    "description": ">  与 ONE PIECE（海贼王） 的主角同名，意为逆风起航",
+    "scripts": {
+        "start": "cross-env NODE_ENV=development webpack serve --config webpack.common.js --progress ",
+        "build": "cross-env NODE_ENV=production webpack --config webpack.common.js",
+        "lint": "npm run lint-eslint && npm run lint-stylelint",
+        "lint-eslint": "eslint -c .eslintrc.js --ext .ts,.tsx,.js,.jsx src",
+        "lint-stylelint": "stylelint --config .stylelintrc.js src/**/*.{less,css,scss}"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/lianglei777/luffy.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/lianglei777/luffy/issues"
+    },
+    "homepage": "https://github.com/lianglei777/luffy#readme",
+    "devDependencies": {
+        "@babel/plugin-proposal-decorators": "^7.13.15",
+        "@babel/plugin-syntax-class-properties": "^7.12.13",
+        "@babel/preset-typescript": "^7.14.5",
+        "@types/react": "^17.0.11",
+        "@types/react-dom": "^17.0.8",
+        "@typescript-eslint/eslint-plugin": "^4.28.0",
+        "@typescript-eslint/parser": "^4.28.0",
+        "antd-dayjs-webpack-plugin": "^1.0.6",
+        "autoprefixer": "^10.2.5",
+        "cross-env": "^7.0.3",
+        "css-loader": "^5.2.1",
+        "eslint": "^7.29.0",
+        "eslint-config-airbnb": "^18.2.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-import": "^2.23.4",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-react": "^7.24.0",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "html-webpack-plugin": "^5.3.1",
+        "less": "^4.1.1",
+        "less-loader": "^8.1.0",
+        "mobx": "^6.2.0",
+        "mobx-react": "^7.1.0",
+        "postcss-loader": "^5.2.0",
+        "prettier": "^2.3.2",
+        "style-loader": "^2.0.0",
+        "stylelint": "^13.13.1",
+        "stylelint-config-prettier": "^8.0.2",
+        "stylelint-config-standard": "^22.0.0",
+        "typescript": "^4.3.4",
+        "webpack": "^5.32.0",
+        "webpack-bundle-analyzer": "^4.4.1",
+        "webpack-cli": "^4.6.0",
+        "webpack-dev-server": "^3.11.2"
+    },
+    "dependencies": {
+        "@babel/core": "^7.13.15",
+        "@babel/preset-env": "^7.13.15",
+        "@babel/preset-react": "^7.13.13",
+        "antd": "^4.15.1",
+        "babel-loader": "^8.2.2",
+        "babel-plugin-import": "^1.13.3",
+        "dayjs": "^1.10.4",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2"
+    }
 }

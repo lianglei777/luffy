@@ -1,0 +1,66 @@
+// 该文件的配置优先于 vscode 全局的 settings.json
+// 防止项目配置被覆盖
+
+// "editor.formatOnSave" 的作用是在我们保存时，会自动执行一次代码格式化。
+// 在遇到 .js 、 .jsx 、.ts 、.tsx 、.json 、.html 、.md 、 .css 、 .less 、 .scss 为后缀的文件时，
+// 都会去使用 Prettier 去格式化代码，而格式化的规则就是我们配置的 .prettierrc 决定的！
+
+
+{
+  // 指定哪些文件不参与搜索
+  "search.exclude": {
+    "**/node_modules": true,
+    "dist": true,
+    "yarn.lock": true
+  },
+
+  "editor.formatOnSave": true,
+
+  // 使用 stylelint 自身的校验即可
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  //  eslint
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "typescript.tsdk": "./node_modules/typescript/lib", // 代替 vscode 的 ts 语法智能提示
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+	"source.fixAll.stylelint": true
+  },
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+
+
+}
+

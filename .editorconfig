@@ -1,0 +1,22 @@
+# 插件：EditorConfig For vs Code
+# 跨编辑器风格统一
+
+root = true
+
+[*]
+
+# 缩进模式：tab 和 space
+indent_style = space
+# 缩进两行
+indent_size = 4
+# 编码格式
+charset = utf-8
+# 行尾部空格去除
+trim_trailing_whitespace = true
+# 文件内容尾部加一空格行
+insert_final_newline = true
+# 换行符风格，可选配置有 lf ，cr ，crlf
+end_of_line = lf
+
+[*.md]
+trim_trailing_whitespace = false
