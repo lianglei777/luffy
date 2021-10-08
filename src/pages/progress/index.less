@@ -1,0 +1,15 @@
+progress {
+    height: 20px;
+    background-color: #fff;
+    /* bgc 需要被设置，否则背景色无法被显示出来 */
+}
+
+/* 表示总长度背景色 */
+progress::-webkit-progress-bar {
+    background-color: red;
+}
+
+/* 表示已完成进度背景色 */
+progress::-webkit-progress-value {
+    background-color: blue;
+}
